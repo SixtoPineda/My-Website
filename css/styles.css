@@ -46,15 +46,15 @@ header::before{
     y no perder info, por eso creamos un elemento ficticio "block"*/
     content: "";
     display: block;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
 }
 
 nav{ /*Para la parte donde esta la imagen y los links*/
     width: 100%; /*Nuestro nav ocupará de lado a lado*/
-    height: 80px; /*Nuestro nav ocupará 80px de alto*/
+    height: 100px; /*Nuestro nav ocupará 80px de alto*/
     background-color: black;/* background-color: rgb(58, 24, 76); */
     /*Borde del nav de color*/
-    border-bottom: 1px solid transparent;
+    border-bottom: 2px solid transparent;
     box-shadow: 1px 1px 10px 0 rgba(106, 90, 205, .8);
     /*Nav transicion para que se esconda*/
     transition: ease-in-out 0.5s;
@@ -62,17 +62,25 @@ nav{ /*Para la parte donde esta la imagen y los links*/
     top: 0;
     z-index: 100;
 }
+/* 
+@keyframes animation_shadow{
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+} */
 
 .nav{
     display: flex; /*poen todo en una misma fila, lo que esta dentro de la etiqueta nav*/
     justify-content: space-between;
-    height: 80px;
+    height: 100px;
     width: 100%;
     align-items: center;
 }
 
 .nav .logo{
-    height: 80px;/*reducir tamaño logo*/
+    height: 100px;/*reducir tamaño logo*/
 }
 
 .nav .logo img{
@@ -85,12 +93,20 @@ nav{ /*Para la parte donde esta la imagen y los links*/
 
 .enlaces-header{
     font-weight: 300;
+    font-size: 20px;
 }
 
 .nav .enlaces-header a{
     color: whitesmoke;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     text-decoration: none; /*Para quitar el subrayado de los links*/
+    background-color: rgba(106, 90, 205, .0);
+    padding: 40px 10px;
+}
+
+.nav .enlaces-header a:hover{
+    background-color: blueviolet;
+    padding: 40px 10px;/*padding de 12px arriba y abajo, y 0 a los lados*/
 }
 
 .hamburguer{
@@ -108,6 +124,8 @@ nav{ /*Para la parte donde esta la imagen y los links*/
     line-height: 80px;
     color: whitesmoke;
 }
+
+/*First Section: About me info*/
 
 .content-header{
     width: 100%;
@@ -154,6 +172,8 @@ nav{ /*Para la parte donde esta la imagen y los links*/
     box-shadow: 0px 0px 15px rgba(106, 90, 205, .8);
     text-shadow: slateblue;
 }
+
+/*-------------------Studies--------------------*/
 
 .titulo{
     font-size: 50px;
@@ -222,5 +242,100 @@ nav{ /*Para la parte donde esta la imagen y los links*/
     transition: 0.2s;
 }
 
+/*----------------WORK EXPERIENCE--------------------*/
+
+.exp-container{
+    background: rgba(106, 90, 205, .0);
+    box-shadow: 1px 1px 10px 0 rgba(24, 21, 41, 0.8);
+}
+
+.container-exp{
+    margin-top: 15px;
+    display: flex; /*Te los coloca todos en una misma linea*/
+    flex-wrap: wrap; /*Si no caben te los pasa a la siguiente linea*/
+    margin-top: 60px;
+    justify-content: space-around;
+}
+
+.exp{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+    background-color: rgba(0, 0, 0, .2);
+    padding: 15px;
+    border-radius: 5px;
+}
+.exp .titles{
+    width: 55%;
+    margin-left: 10px;
+}
+.exp .titles>h3{
+    width: 100%;
+    font-size: 30px;
+    font-weight: 500;
+}
+.exp .titles>h4{
+    width: 100%;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+.exp .titles>h5{
+    width: 100%;
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+.exp .titles>h6{
+    width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 10px;
+    font-style: oblique;
+}
+.exp .titles>ul{
+    color: whitesmoke;
+    width: 90%;
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 35px;
+    margin-left: 15px;
+    text-align: justify;
+}
+.exp .titles ul>li{
+    margin-top: 15px;
+}
+.exp>img{
+    height: 50px;
+    height: 70%;
+    width: 43%;
+    margin-top: 5px;
+    align-content:center;
+}
+
+.exp>a{
+    width: 130px;
+    height: 42px;
+
+    padding: 12px 0;
+    text-align: center;
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    margin-left: 45%;
+    text-decoration: none;
+    color: whitesmoke;
+}
+.exp>a:hover{
+    color: blueviolet;
+}
 
 
+
+/*Results*/
+
+.results{
+    background: rgb(33, 49, 62);
+    box-shadow: 1px 1px 10px 0 rgba(24, 21, 41, 0.8);
+}
